@@ -1,18 +1,37 @@
 // pages/book-detail/book-detail.js
+import {
+  BookModel
+} from '../../models/book.js'
+const bookModel = new BookModel()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    comments: [],
+    book: '',
+    likeStatus: false,
+    likeCount: 0
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    const bid = options.bid
+    const detail = bookModel.getDetail(bid)
+    const comments = bookModel.getComments(bid)
+    const likeStatus = bookModel.getLikeStatus(bid)
 
+    Promise.all([detail, comments, likeStatus]).then((res) => {
+      this.setData({
+        book: res[0].data,
+        comments: res[1].data.comments,
+        likeStatus: res[2].data.like_status,
+        likeCount: res[2].data.fav_nums
+      })
+    })
   },
 
   /**

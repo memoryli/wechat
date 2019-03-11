@@ -7,7 +7,7 @@
   ],
   "window": {
     "navigationBarBackgroundColor": "#FFFFFF",
-    "navigationBarTitleText": "林间有风",
+    "navigationBarTitleText": "宜信期刊",
     "navigationBarTextStyle": "black",
     "navigationStyle": "default",
     "backgroundColor": "#FFFFFF",
@@ -20,19 +20,19 @@
     "list": [
       {
         "pagePath": "pages/classic/classic",
-        "text": "流行",
+        "text": "首页",
         "iconPath": "/images/tab/classic.png",
         "selectedIconPath": "/images/tab/classic@highlight.png"
       },
       {
         "pagePath": "pages/book/book",
-        "text": "书籍",
+        "text": "期刊",
         "iconPath": "/images/tab/book.png",
         "selectedIconPath": "/images/tab/book@highlight.png"
       },
       {
         "pagePath": "pages/my/my",
-        "text": "喜欢",
+        "text": "个人中心",
         "iconPath": "/images/tab/my.png",
         "selectedIconPath": "/images/tab/my@highlight.png"
       }

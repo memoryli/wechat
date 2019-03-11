@@ -1,0 +1,5 @@
+<view class="container tag-class ">
+  <slot name="before"></slot>
+  <text class='text'>{{text}}</text>
+  <slot name="after"></slot>
+</view>
