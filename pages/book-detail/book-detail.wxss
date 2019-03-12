@@ -54,19 +54,15 @@
     flex-wrap: wrap;
 }
 
-.comment-container v-tag{
+.comment-container v-tag {
     margin-right: 15rpx;
     margin-bottom: 10rpx;
 }
-/* .comment-container > v-tag:nth-child(1) view {
-  background-color: #fffbdd
-}
-.comment-container > v-tag:nth-child(2) view {
-  background-color: #eefbff
-} */
+
 .content {
     text-indent: 58rpx;
     font-weight: 500;
+    font-size: 28rpx;
 }
 
 .num {
@@ -82,7 +78,7 @@
 .comment-container>v-tag:nth-child(2)>view {
     background-color: #eefbff;
 } */
-.ex-tag {
+.ex-tag1 {
     background-color: #fffbdd !important;
 }
 
@@ -195,6 +191,7 @@
     background-color: #f5f5f5;
     border-radius: 15px;
     padding-left: 25rpx;
+    font-size: 28rpx;
 }
 
 .shadow {
