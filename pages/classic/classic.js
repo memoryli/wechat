@@ -24,6 +24,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
+    wx.showLoading()
     classicModel.getlatest((res) => {
       // this._getLikeStatus(res.id, res.type)
       this.setData({
@@ -32,6 +33,7 @@ Page({
         likeStatus: res.like_status,
         likeCount: res.fav_nums
       })
+      wx.hideLoading()
     })
   },
   onLike: function(event) {

@@ -24,6 +24,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    wx.showLoading()
     const bid = options.bid
     const detail = bookModel.getDetail(bid)
     const comments = bookModel.getComments(bid)
@@ -36,6 +37,7 @@ Page({
         likeStatus: res[2].data.like_status,
         likeCount: res[2].data.fav_nums
       })
+      wx.hideLoading()
     })
   },
   onLike(event) {
@@ -53,8 +55,7 @@ Page({
     })
   },
   onPost(event) {
-    const comment = event.detail.text
-    console.log(comment)
+    const comment = event.detail.text || event.detail.value
     if (!comment) {
       return
     }
