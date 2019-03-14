@@ -6,12 +6,12 @@
     "pages/book-detail/book-detail"
   ],
   "window": {
-    "navigationBarBackgroundColor": "#FFFFFF",
-    "navigationBarTitleText": "宜信期刊",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "宜信周刊",
     "navigationBarTextStyle": "black",
     "navigationStyle": "default",
-    "backgroundColor": "#FFFFFF",
-    "enablePullDownRefresh": true
+    "backgroundColor": "#ffffff",
+    "enablePullDownRefresh": false
   },
   "tabBar": {
     "selectedColor": "#000000",

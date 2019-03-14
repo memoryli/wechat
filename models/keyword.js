@@ -20,7 +20,6 @@ class KeywordModel extends HTTP {
   }
 
   addToHistory(keyword) {
-    console.log(keyword)
     let words = this.getHistory()
     const has = words.includes(keyword)
     // 队列 栈

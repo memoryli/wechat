@@ -1,5 +1,9 @@
 // pages/book/book.js
 import {
+  random
+} from '../../util/common.js'
+
+import {
   BookModel
 } from '../../models/book.js'
 const bookModel = new BookModel()
@@ -10,7 +14,8 @@ Page({
    */
   data: {
     books: [],
-    searching: false
+    searching: false,
+    more: ''
   },
 
   /**
@@ -19,7 +24,6 @@ Page({
   onLoad: function (options) {
     wx.showLoading()
     bookModel.getHotList().then((res) => {
-      console.log(res.data)
       this.setData({
         books: res.data
       })
@@ -57,6 +61,12 @@ Page({
       searching: false
     })
   },
+  onReachBottom() {
+    console.log(123)
+    this.setData({
+      more: random(16)
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -89,13 +99,6 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
 
   },
 
