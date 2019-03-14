@@ -3,7 +3,7 @@
     <!-- <open-data type="userAvatarUrl" class="avatar avatar-position"/> -->
     <v-button open-type="getUserInfo" class="avatar-position" bindgetuserinfo="onGetUserInfo">
     授权
-        <!-- <image slot="img" class="avatar" src="/images/my/my.png" /> -->
+        <image slot="img" class="avatar" src="/images/my/my.png" />
     </v-button>
     <!-- 登录 难点 服务器 微信支付 -->
     <view wx:if="{{authorized}}" class="avatar-container avatar-position">
